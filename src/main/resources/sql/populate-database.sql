@@ -1,0 +1,4 @@
+INSERT INTO ACAO (ID_ACAO, NOME, DESCRICAO, ATIVO) VALUES (ACAO_SEQ.NEXTVAL, 'Andar', 'Realizar a ação de andar.', 1);
+INSERT INTO ACAO (ID_ACAO, NOME, DESCRICAO, ATIVO) VALUES (ACAO_SEQ.NEXTVAL, 'Correr', 'Realizar a ação de correr.', 1);
+INSERT INTO ACAO (ID_ACAO, NOME, DESCRICAO, ATIVO) VALUES (ACAO_SEQ.NEXTVAL, 'Falar', 'Realizar a ação de falar.', 1);
+INSERT INTO ACAO (ID_ACAO, NOME, DESCRICAO, ATIVO) VALUES (ACAO_SEQ.NEXTVAL, 'Nadar', 'Realizar a ação de nadar.', 0);
