@@ -22,6 +22,9 @@ public class AcaoController {
 
     @GetMapping()
     public ResponseEntity findAll(){
+
+        //Limpa execucoes para o get
+        repository.findAll().forEach(x -> x.setExecucoes(null));
         return ResponseEntity.ok(repository.findAll());
     }
 
@@ -29,6 +32,7 @@ public class AcaoController {
     public ResponseEntity findById(@PathVariable Integer id){
 
         Optional<AcaoModel> optionalAction = repository.findById(id);
+        optionalAction.get().setExecucoes(null);
         return ResponseEntity.ok(optionalAction.get());
     }
 

@@ -1,10 +1,13 @@
 package br.com.fiap.dsrpt21.model;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "EXECUCAO")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ExecucaoModel {
 
     @Id

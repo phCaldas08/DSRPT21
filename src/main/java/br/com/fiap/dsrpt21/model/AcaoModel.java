@@ -1,6 +1,7 @@
 package br.com.fiap.dsrpt21.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ACAO")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class AcaoModel {
 
     @Id
@@ -30,6 +32,9 @@ public class AcaoModel {
 
     @Column(name = "ATIVO")
     private Boolean ativo;
+
+    @OneToMany(mappedBy = "acao")
+    private List<ExecucaoModel> execucoes;
 
     public AcaoModel() {
     }
@@ -71,5 +76,13 @@ public class AcaoModel {
 
     public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
+    }
+
+    public List<ExecucaoModel> getExecucoes() {
+        return execucoes;
+    }
+
+    public void setExecucoes(List<ExecucaoModel> execucoes) {
+        this.execucoes = execucoes;
     }
 }
