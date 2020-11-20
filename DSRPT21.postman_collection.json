@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "954c9859-0091-4661-9b36-5c914130b8f9",
+		"name": "DSRPT21",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ação",
+			"item": [
+				{
+					"name": "Get All Ações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/acao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"acao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ação By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/acao/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"acao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Ação",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Andar\",\n    \"descricao\" : \"Realizar o movimento de andar.\",\n    \"ativo\" : true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/acao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"acao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Ação",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\" : \"Andar\",\n    \"descricao\" : \"Realizar o movimento de andar. Versão 2\",\n    \"ativo\" : true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/acao/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"acao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Ação",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/acao/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"acao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Execução",
+			"item": [
+				{
+					"name": "Executar Acão",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/execucao/executar?idAcao=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"execucao",
+								"executar"
+							],
+							"query": [
+								{
+									"key": "idAcao",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Execuções",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/execucao",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"execucao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Execução By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/dsrpt21/api/execucao/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dsrpt21",
+								"api",
+								"execucao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
